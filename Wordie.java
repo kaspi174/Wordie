@@ -1,14 +1,16 @@
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.Scanner;
+import java.io.FileReader;
 
 public class Wordie{
-/**
- * Fucntion to read in file given by user. 
- */
-void inputFile(){   
 
-    try {
+public static void main(String args[]){
+
+     String line;
+     int count = 0;
+
+       try {
         File myObj = new File("filename.txt");
         Scanner myReader = new Scanner(myObj);
         while (myReader.hasNextLine()){
@@ -16,50 +18,11 @@ void inputFile(){
             System.out.println(data);
         }
         myReader.close();
-    }catch(FileNotFoundException e){
+         }catch(FileNotFoundException e){
         System.out.println("An error occurred.");
         e.printStackTrace();
-    }
+         }
 
-}
-
-/**
- * Function to count words in document.
- */
-int wordCount(){
-
-    return 0;
-}
-
-/**
- * Counting and storing characters in a 3d array.
- */
-int charCount(){
-    
-    return 0;
-}
-
-/**
- * Function to display the results of the program.
- */
-void displayResults(){
-  
-}
-
-/**
- * Function to create a txt file with results
- */
-void createResults(){
-
-}
-
-
-
-
-public static void main(String args[]){
-
-        //take in file
-        inputFile();
 
         //run word count
 
